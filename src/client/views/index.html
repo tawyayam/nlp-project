@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Amdy NLP</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Amdy NLP</div>
+      <div class="navs">
+        <ul>
+          <li class="active">Home</li>
+          <li>About</li>
+          <li>Login</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <form id="urlForm">
+          <input
+            id="name"
+            type="text"
+            name="url"
+            placeholder="Enter URL"
+            required
+          />
+          <button id="submitButton" type="submit">Submit</button>
+        </form>
+      </section>
+
+      <div class="results">
+        <strong>Result Will Show Here</strong>
+      </div>
+    </main>
+
+    <footer>
+      <p>Developed By <strong>Amdy Ndao</strong>, All Rights deserved</p>
+    </footer>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
