@@ -8,8 +8,8 @@ let results = document.querySelector(".results");
 const form = document.getElementById("urlForm");
 form.addEventListener("submit", handleSubmit);
 
-function handleSubmit(e) {
-  e.preventDefault();
+const handleSubmit = (event) => {
+  event.preventDefault();
 
   // Get the URL from the input field
   const formText = document.getElementById("name").value;
